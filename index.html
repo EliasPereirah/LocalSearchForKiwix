@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>United Search</title>
-    <link rel="shortcut icon" href="favicon.png">
+    <link id="icon" rel="icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js?t=2" async="async"></script>
+    <script src="script.js" async="async"></script>
     <script>
-        //let base = document.querySelector('base');
         let base = document.createElement('base');
         if(document.URL.charAt(0) === 'f'){
-            base.href = 'http://localhost:8000/wikipedia_pt_all_novid_2018-07/I/';
+           base.href = 'http://localhost:8181/';
         }else{
-            base.href = 'http://'+document.domain+'/wikipedia_pt_all_novid_2018-07/I/';
+            base.href = 'http://'+document.domain+'/';
         }
         document.head.append(base);
     </script>
-
 
 
 </head>
@@ -31,26 +29,14 @@
                          <label>
                     <select name="wiki">
                         <option value="all">All Wikis</option>
-                        <option value="wikipedia_pt_all_novid_2018-07">Wikipedia</option>
-                        <option value="wiktionary_pt_all_novid_2018-07">Wikcionário</option>
-                        <option value="pt.stackoverflow.com_por_all_2018-08">Stack Overflow</option>
-                        <option value="wikiquote_pt_all_novid_2019-02">Wikiquote</option>
-                        <option value="wikinews_pt_all_novid_2018-10">Wikinews</option>
-                        <option value="wiktionary_en_simple_all_nopic_2019-04">Wiktionary English</option>
-                        <option value="wikibooks_pt_all_novid_2019-04">Wikibooks</option>
-                        <option value="economics.stackexchange.com_en_all_2019-01">Economics</option>
-                        <option value="gutenberg_pt_all_2018-10">Gutenberg</option>
-
-
-                        <option value="imagens_">Imagens</option>
-                        <option value="ted_en_technology_2018-07">TED</option>
+                        <option value="imagens_">Images</option>
                     </select>
                 </label>
-                <label for="qt">Qt:</label>  <input id="qt" type="number" name="qt">
-                <button type="submit">Buscar Agora</button>
+               <div style="display: none"> <label for="qt">Qt:</label>  <input id="qt" type="number" name="qt"></div>
+                <button id="search_btn" type="submit">Buscar Agora</button>
             </span> <!-- centralise -->
             </form>
-            <div id="sfor" style="height: 20px;padding: 4px 0"><span></span><b class="green"></b></div>
+            <div id="sfor" style="height: 20px;padding: 4px 0"><span></span><b class="blue"></b></div>
             <span id="warnings"></span>
         </div> <!-- application -->
     <article>
@@ -60,16 +46,22 @@
     </div><!-- content -->
 </div> <!-- container -->
 
-<footer style="text-align: center;display: none">
-	<b id='topo'style="color: greenyellow;">United Search</b> 2019 - &copy Todos Direitos Livres
+<footer>
+	<div class="cfooter">
+        <b id='topo' style="font-weight: bold"><a style="text-decoration: none;color: #fff" href="https://github.com/EliasPereirah/LocalSearchForKiwix">United Search</a></b>
+    </div>
 </footer>
 <script type="text/javascript">
-	var topo = document.querySelector("#topo");
+    let icon = document.getElementById('icon');
+    let theURL = new URL(document.URL);
+    icon.href = theURL.protocol+theURL.pathname+"/../favicon.png"; // because we change base url
+	let topo = document.querySelector("#topo");
 	topo.onclick = ()=>{
-		if(data.domain.charAt(0) ==='C'){
-            document.location = data.domain+'/UnitedSearch/index.html';
+        let pname = new URL(document.domain).pathname;
+        if(data.domain.charAt(0) ==='C'){
+            document.location = data.domain + pname;
         }else{
-            document.location = 'http://'+data.domain+'/UnitedSearch/index.html';
+            document.location = 'http://'+data.domain + pname;
         }
 	}
 </script>

@@ -1,129 +1,192 @@
-html,body{
+html, body {
     padding: 0 !important;
     border: 0 !important;
     margin: 0 !important;
-    background-color: aliceblue;
 }
-.green{
+footer {
+    position: relative;
+    text-align: center;
+    padding: 50px;
+    background-color: #0433ff;
+    color: #fff;
+}
+.block {
+    word-break: break-word;
+    border: 2px solid #ccc;
+    padding: 11px;
+    width: 80%;
+    margin: 6px 10%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    min-height: calc(85vh);
+}
+
+.informations {
+    color: #2b9f2b;
+    display: block;
+    font-size: 16px;
+    width: fit-content;
+    padding: 3px;
+
+}
+
+.green {
     color: #9fff04;
     font-family: monospace;
     font-weight: 900;
     font-size: 16px;
-
 }
-#temporary-html{
+
+.blue {
+    color: #0433ff;
+}
+
+cite {
+    font-style: inherit;
+}
+
+#temporary-html {
     display: none;
 }
-.result{
+
+.result {
     padding: 25px;
     position: relative;
 
 }
-.result li{
+
+.result li {
     display: block;
     margin-bottom: 8px;
-    border-bottom: 1px solid #ccc;
 }
-.result li a{
-    font-size: 18px;
+
+.result li a {
+    display: block;
+    font-size: 25px;
     text-decoration: none;
 }
-.wiki{
+
+.wiki {
     color: #484747;
 
 }
-.result img{
+
+.result img {
     width: 250px;
     height: auto;
 }
 
-.application{
-    /*background-color: rgb(64, 91, 81);*/
-    background-color: hsl(155, 12%, 20%);
+.application {
+    background-color: rgb(246 246 246);
     width: 80%;
     margin: 0 10%;
-    padding: 25px 10px 10px 10px;
+    border-radius: 0 0 14px 14px;
+    padding: 31px 10px 31px 10px;
     color: #fff;
     text-align: center;
     box-sizing: border-box;
+}
 
-}
-.application form select{
-    height: 30px;
+.application form select {
+    height: 43px;
+    border: 2px solid #fff;
     border-radius: 4px;
+    font-weight: 600;
+    max-width: 150px;
+    color: #373636;
 }
-.application form input#qt{
- width: 35px;
- height: 25px;
-}
-.application form input#us{
-    width: 50%;
+
+.application form input#qt {
+    width: 35px;
     height: 25px;
-    border-radius: 4px;
 }
-.application button{
-    height: 25%;
-    background-color: #eeebe9fc;
+
+.application form input#us {
+    width: 50%;
+    height: 40px;
+    padding: 0 14px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-weight: 900;
+    font-family: Georgia, sans-serif;
+    font-size: 1em;
+}
+
+.application button {
+    height: 40px;
+    background-color: #598bd1;
     border: none;
     padding: 7px;
     font-weight: 700;
-    color: #231e33;
-    border-radius: 3px;
+    color: #ffffff;
+    border-radius: 4px;
 }
-.application label[for='us']{
+
+.application label[for='us'] {
     font-size: 18px;
 }
-#sfor{
+
+#sfor {
     display: block;
     text-align: center;
     margin: 4px 0 0 0;
     font-weight: 600;
+    color: #4e4a4a;
 }
-#warnings{
-    background-color: #ff5e33;
+
+#warnings {
+    background-color: #e6856b;
     color: #fff;
-    padding: 5px;
+    padding: 11px;
     width: 50%;
+    font-weight: 700;
     display: none;
     margin: 5px 25%;
     text-align: center;
-
+    border-radius: 4px;
 }
-#deep-search, #find-imagens{
- width: 80%;
-   height: 120px;
+
+#deep-search, #find-imagens {
+    width: 80%;
+    height: 120px;
     background-color: red;
     display: none;
     overflow: scroll;
 }
-#find-imagens{
+
+#find-imagens {
     background-color: green;
 }
 
-div.wiki:first-letter{
+div.wiki:first-letter {
     text-transform: uppercase;
 }
+
 /* QUERIS */
-@media (max-width: 600px){
-	.application{
-		width: 100%;
-		margin: 0;
-		box-sizing: border-box;
-	}
-	label[for='qt'], input#qt{
-		display: none;
-	}
+@media (max-width: 600px) {
+    .application {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
 
-	
-	.application form input#us{
-		width: 80%;
-		margin: 0 10% 2px 10%;
-		padding: 20px 5px;
-		box-sizing: border-box;
+    label[for='qt'], input#qt {
+        display: none;
+    }
 
-	}
-	.centralise{
-		text-align: center;
-		display: block;
-	}
+
+    .application form input#us {
+        width: 80%;
+        margin: 0 10% 2px 10%;
+        padding: 20px 5px;
+        box-sizing: border-box;
+
+    }
+
+    .centralise {
+        text-align: center;
+        display: block;
+    }
 }
